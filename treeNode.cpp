@@ -50,7 +50,16 @@ void TreeNode::setRight(TreeNode* r){
 	right = r;
 }
 
-void TreeNode::swapWithParent(){//swaps number with the parents, effectively swapping their spots in the tree
+int TreeNode::getCurrentDepth(int depth){
+	if(getParent() != NULL){
+		depth++;
+		depth = getCurrentDepth(depth);
+	}else{
+		return depth;
+	}
+}
+
+int TreeNode::swapWithParent(){//swaps number with the parents, effectively swapping their spots in the tree
 	int tNum = getNum();
 	if(getParent() != NULL){
 		num = getParent()->getNum();

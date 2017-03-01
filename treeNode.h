@@ -29,7 +29,8 @@ class TreeNode
 		TreeNode* getRight();
 		void setRight(TreeNode*);
 		
-		void swapWithParent();
+		int swapWithParent();
+		int getCurrentDepth(int);
 };
 
 #endif
