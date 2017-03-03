@@ -50,10 +50,12 @@ void TreeNode::setRight(TreeNode* r){
 	right = r;
 }
 
-int TreeNode::getCurrentDepth(int depth){
+int TreeNode::getCurrentDepth(int depth, TreeNode* current){
 	if(getParent() != NULL){
+		std::cout << depth << std::endl;
+		current = getParent();
 		depth++;
-		depth = getCurrentDepth(depth);
+		depth = getCurrentDepth(depth, current);
 	}else{
 		return depth;
 	}

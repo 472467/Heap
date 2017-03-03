@@ -30,7 +30,7 @@ class TreeNode
 		void setRight(TreeNode*);
 		
 		int swapWithParent();
-		int getCurrentDepth(int);
+		int getCurrentDepth(int, TreeNode*);
 };
 
 #endif

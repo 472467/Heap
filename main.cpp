@@ -16,7 +16,10 @@ int main(){
 	TreeNode* head = new TreeNode(NULL, -1);
 	TreeNode* child1 = new TreeNode(head, 1);
 	TreeNode* child2 = new TreeNode(child2, 1);
-	cout << child2->getCurrentDepth(0);
+	
+	int x = child2->getCurrentDepth(0, child2);
+	cout << x << endl;
+	
 	char* file =  "numbers.txt";// new char[100];
 	//cin.getline(file, 100);
 	
@@ -82,6 +85,9 @@ void convertTextToHeap(TreeNode*& head, char* f){
 			
 			
 		}
+		
+		
+		
 		TreeNode* current = head;
 		convertIntArrayToHeap(nArray, head);
 		
