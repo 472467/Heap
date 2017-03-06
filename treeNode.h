@@ -12,6 +12,7 @@ class TreeNode
 		TreeNode* left;
 		TreeNode* right;
 		int num;
+		float id;
 	
 	public:
 		TreeNode(TreeNode*, int);
@@ -30,7 +31,11 @@ class TreeNode
 		void setRight(TreeNode*);
 		
 		int swapWithParent();
-		int getCurrentDepth(int, TreeNode*);
+		int getCurrentDepth();
+		
+		void safeDelete();
+		
+		float getID();
 };
 
 #endif
